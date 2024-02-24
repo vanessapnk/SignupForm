@@ -18,7 +18,7 @@ usersRouter.post("/auth/signup", async (req, res) => {
     } catch (err) {
 
         const mensagem = 'Os dados introduzidos não são válidos.'
-        console.log(err); // Apenas para registro de logs, você pode remover se preferir
+        console.log(err)
         if (err.message === 'As senhas não coincidem') {
             return res.status(500).json({ mensagem: mensagem, error: 'As senhas não coincidem' });
         } else if (err.message === "O endereço introduzido já está registado.") {
